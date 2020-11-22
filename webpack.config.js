@@ -39,7 +39,12 @@ module.exports = (env, agrv) => {
         }
       ]
     },
-    resolve: { extensions: ['.js', '.jsx'] },
+    resolve: {
+      extensions: ['.js', '.jsx'],
+      alias: {
+        Component: path.resolve(__dirname, 'component/')
+      }
+    },
     output: {
       path: path.resolve('dist'),
       publicPath: '../dist/',
