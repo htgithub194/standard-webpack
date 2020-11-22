@@ -1,12 +1,9 @@
 import React from 'react';
+import Counter from '../component/counter/counter'
 
-export class App extends React.Component {
+export const App = () => {
 
-    render() {
-        return (
-            <div>
-                Hello, world!123asdasdasdasdsfsdf
-            </div>
-        );
-    }
+    return (
+        <Counter />
+    );
 }
