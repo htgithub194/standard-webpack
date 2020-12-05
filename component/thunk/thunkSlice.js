@@ -1,6 +1,5 @@
 import { createSlice, nanoid, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios';
-import "babel-polyfill";
 
 export const fetchPosts = createAsyncThunk('posts/fetchPosts', async () => {
     const response = await axios.get(`https://api.github.com/users/htgithub194`);

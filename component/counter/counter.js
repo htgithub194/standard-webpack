@@ -20,12 +20,17 @@ const Counter = () => {
         dispatch(incrementByAmount(5))
     }
 
+    const _sendSocketIO = e => {
+        dispatch({ type: 'server/hello', data: 'Hello!' })
+    }
+
     return (
         <div>
             <a>Counter: {counter}</a>
             <button onClick={_increate}>In-create</button>
             <button onClick={_decreate}>De-create</button>
             <button onClick={_incrementByAmount}>In-create 5</button>
+            <button onClick={_sendSocketIO}>Send Socket io</button>
         </div>
     );
 }
